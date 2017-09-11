@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+<plugin id="com.github.oxygen-plugins.plugin2${version}" name="Conflict Test Plugin 2" description="Conflict tests"
+    version="${version}" vendor="nkutsche.com" class="conflict.plugin.tests.plugin2.ConflictPlugin2"
+	classLoaderType="preferReferencedResources">
+	<runtime>
+	    <librariesFolder name="lib"/>
+	</runtime>
+    <extension type="WorkspaceAccess" class="conflict.plugin.tests.plugin2.ConflictPlugin2Extension"/>
+</plugin>
