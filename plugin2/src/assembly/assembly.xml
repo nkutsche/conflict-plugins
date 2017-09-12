@@ -41,13 +41,6 @@
             <scope>runtime</scope>
             <includes>
                 <include>org.codehaus.woodstox</include>
-            </includes>
-        </dependencySet>
-        <dependencySet>
-            <outputDirectory>/tools</outputDirectory>
-            <unpack>false</unpack>
-            <scope>runtime</scope>
-            <includes>
                 <include>com.github.oxygen-plugins</include>
             </includes>
         </dependencySet>

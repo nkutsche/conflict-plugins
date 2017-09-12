@@ -1,4 +1,4 @@
-package conflict.plugin.tests.pluginHelper;
+package conflict.plugin.tests.plugin1.parser;
 
 import java.io.UnsupportedEncodingException;
 
@@ -19,7 +19,7 @@ public class PositionalStaxParser {
 		XMLInputFactory2 xmlInputFactory2 = (XMLInputFactory2) WstxInputFactory.newInstance();
 
 		if(xmlInputFactory2 != null){
-			System.out.println("successfull!");
+			System.out.println("successfull 1!");
 		}
 	}
 
