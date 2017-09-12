@@ -21,7 +21,11 @@ public class ConflictPlugin2Extension implements WorkspaceAccessPluginExtension 
 
 		// This is the implementation of the
 		// WorkspaceAccessPluginExtension plugin interface.
+		ClassLoader oldClassLoader = Thread.currentThread().getContextClassLoader();
+		// This is the implementation of the
+		// WorkspaceAccessPluginExtension plugin interface.
 		try {
+			Thread.currentThread().setContextClassLoader(ConflictPlugin2Extension.this.getClass().getClassLoader());
 			new PositionalStaxParser().parse();
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
@@ -35,8 +39,10 @@ public class ConflictPlugin2Extension implements WorkspaceAccessPluginExtension 
 		} catch (SAXException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
 
+		} finally {
+			Thread.currentThread().setContextClassLoader(oldClassLoader);
+		}
 	}
 
 }
